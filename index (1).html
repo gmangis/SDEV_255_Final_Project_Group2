@@ -5,133 +5,135 @@
   <title>Course List</title>
   <style>
     /* Reset some default styles */
-    body,
-    h1,
-    ul,
-    button {
-      margin: 0;
-      padding: 0;
-    }
+  /* Reset some default styles */
+body,
+h1,
+ul,
+button {
+  margin: 0;
+  padding: 0;
+}
 
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f7f7f7;
-      margin: 0;
-    }
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f2f2f2; /* Light gray background */
+  margin: 0;
+}
 
-    h1 {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      margin-bottom: 20px;
-    }
+h1 {
+  background-color: #4CAF50; /* Green */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    #course-list {
-      list-style: none;
-      padding: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+#course-list {
+  list-style: none;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-    #course-list li {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      margin: 10px;
-      padding: 15px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s ease-in-out;
-      width: calc(33.33% - 20px);
-      box-sizing: border-box;
-    }
+#course-list li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  width: calc(33.33% - 20px);
+  box-sizing: border-box;
+}
 
-    #course-list li:hover {
-      transform: scale(1.02);
-    }
+#course-list li:hover {
+  transform: scale(1.02);
+}
 
-    #add-course-btn {
-      display: block;
-      margin: 20px auto;
-      padding: 10px 20px;
-      background-color: #333;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.2s ease-in-out;
-    }
+#add-course-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
 
-    #add-course-btn:hover {
-      background-color: #555;
-    }
+#add-course-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
 
-    /* Styles for the Add Course form */
-    #add-course-form {
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+/* Styles for the Add Course form */
+#add-course-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-    label {
-      display: block;
-      margin-bottom: 5px;
-    }
+label {
+  display: block;
+  margin-bottom: 5px;
+}
 
-    input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-    }
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
 
-    button[type="submit"] {
-      background-color: #333;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.2s ease-in-out;
-    }
+button[type="submit"] {
+  background-color: #4CAF50; /* Green */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
 
-    button[type="submit"]:hover {
-      background-color: #555;
-    }
+button[type="submit"]:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
 
-    /* Styles for the View Course page */
-    #course-details {
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+/* Styles for the View Course page */
+#course-details {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-    /* Back to Course List button */
-    #back-to-list {
-      background-color: #333;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.2s ease-in-out;
-      display: block;
-      margin-top: 20px;
-    }
+/* Back to Course List button */
+#back-to-list {
+  background-color: #4CAF50; /* Green */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  display: block;
+  margin-top: 20px;
+}
 
-    #back-to-list:hover {
-      background-color: #555;
-    }
+#back-to-list:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
   </style>
 </head>
 
