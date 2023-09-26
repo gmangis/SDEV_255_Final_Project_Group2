@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const courseList = document.getElementById('course-list');
     const addCourseBtn = document.getElementById('add-course-btn');
     const addCourseForm = document.getElementById('add-course-form');
+    const courseDetailsContainer = document.getElementById('course-details');
 
     // Function to display the list of courses
     function displayCourses() {
@@ -59,6 +60,42 @@ document.addEventListener('DOMContentLoaded', () => {
         if (confirmDelete) {
             courses = courses.filter(course => course.id !== id);
             displayCourses();
+        }
+    }
+
+    // Function to display individual course details
+    function displayCourseDetails(id) {
+        const course = courses.find(course => course.id === id);
+
+        if (course) {
+            courseDetailsContainer.innerHTML = `
+                <h2>${course.name}</h2>
+                <p>Teacher: ${course.teacher}</p>
+                <button id="back-to-list">Back to Course List</button>
+            `;
+
+            // Event listener for the "Back to Course List" button
+            const backToListBtn = document.getElementById('back-to-list');
+            backToListBtn.addEventListener('click', () => {
+                window.location.href = 'index.html'; // Navigate back to the course list
+            });
+        } else {
+            courseDetailsContainer.innerHTML = 'Course not found.';
+        }
+    }
+
+    // Check if the current page is the view_course.html page
+    const isViewCoursePage = window.location.pathname.endsWith('view_course.html');
+    if (isViewCoursePage) {
+        // Extract the course ID from the URL query parameters
+        const queryParams = new URLSearchParams(window.location.search);
+        const courseId = queryParams.get('id');
+
+        if (courseId) {
+            displayCourseDetails(parseInt(courseId));
+        } else {
+            // Handle the case where the course ID is missing or invalid
+            courseDetailsContainer.innerHTML = 'Invalid course ID.';
         }
     }
 
