@@ -5,135 +5,141 @@
   <title>Course List</title>
   <style>
     /* Reset some default styles */
-  /* Reset some default styles */
-body,
-h1,
-ul,
-button {
-  margin: 0;
-  padding: 0;
-}
+    body,
+    h1,
+    ul,
+    button {
+      margin: 0;
+      padding: 0;
+    }
 
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f2f2f2; /* Light gray background */
-  margin: 0;
-}
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f2f2f2;
+      /* Light gray background */
+      margin: 0;
+    }
 
-h1 {
-  background-color: #4CAF50; /* Green */
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  margin-bottom: 20px;
-}
+    h1 {
+      background-color: #4CAF50;
+      /* Green */
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-#course-list {
-  list-style: none;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+    #course-list {
+      list-style: none;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-#course-list li {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  margin: 10px;
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
-  width: calc(33.33% - 20px);
-  box-sizing: border-box;
-}
+    #course-list li {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      margin: 10px;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease-in-out;
+      width: calc(33.33% - 20px);
+      box-sizing: border-box;
+    }
 
-#course-list li:hover {
-  transform: scale(1.02);
-}
+    #course-list li:hover {
+      transform: scale(1.02);
+    }
 
-#add-course-btn {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  background-color: #4CAF50; /* Green */
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-}
+    #add-course-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      /* Green */
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
 
-#add-course-btn:hover {
-  background-color: #45a049; /* Darker green on hover */
-}
+    #add-course-btn:hover {
+      background-color: #45a049;
+      /* Darker green on hover */
+    }
 
-/* Styles for the Add Course form */
-#add-course-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+    /* Styles for the Add Course form */
+    #add-course-form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-}
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
 
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
 
-button[type="submit"] {
-  background-color: #4CAF50; /* Green */
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-}
+    button[type="submit"] {
+      background-color: #4CAF50;
+      /* Green */
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
 
-button[type="submit"]:hover {
-  background-color: #45a049; /* Darker green on hover */
-}
+    button[type="submit"]:hover {
+      background-color: #45a049;
+      /* Darker green on hover */
+    }
 
-/* Styles for the View Course page */
-#course-details {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+    /* Styles for the View Course page */
+    #course-details {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-/* Back to Course List button */
-#back-to-list {
-  background-color: #4CAF50; /* Green */
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-  display: block;
-  margin-top: 20px;
-}
+    /* Back to Course List button */
+    #back-to-list {
+      background-color: #4CAF50;
+      /* Green */
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+      display: block;
+      margin-top: 20px;
+    }
 
-#back-to-list:hover {
-  background-color: #45a049; /* Darker green on hover */
-}
-
+    #back-to-list:hover {
+      background-color: #45a049;
+      /* Darker green on hover */
+    }
   </style>
 </head>
 
@@ -162,10 +168,12 @@ button[type="submit"]:hover {
         courses.forEach(course => {
           const listItem = document.createElement('li');
           listItem.innerHTML = `
-                <a href="view_course.html?id=${course.id}">${course.name}</a>
-                <button class="edit-btn" data-id="${course.id}">Edit</button>
-                <button class="delete-btn" data-id="${course.id}">Delete</button>
-            `;
+            <a href="view_course.html?id=${course.id}&name=${course.name}&teacher=${course.teacher}">
+              ${course.name}
+            </a>
+            <button class="edit-btn" data-id="${course.id}">Edit</button>
+            <button class="delete-btn" data-id="${course.id}">Delete</button>
+          `;
           courseList.appendChild(listItem);
 
           // Attach event listeners for edit and delete buttons
@@ -220,8 +228,40 @@ button[type="submit"]:hover {
         });
       }
 
-      // Display courses on page load
-      displayCourses();
+      // Implement basic client-side routing
+      const navigateTo = (path) => {
+        history.pushState(null, null, path);
+        handleRoute(path);
+      };
+
+      const handleRoute = (path) => {
+        if (path === 'index.html') {
+          displayCourses();
+        } else if (path.startsWith('view_course.html?id=')) {
+          const courseId = parseInt(path.split('=')[1]);
+          const course = getCourseById(courseId);
+          if (course) {
+            window.location.href = `view_course.html?id=${courseId}`;
+          }
+        } else if (path.startsWith('edit_course.html?id=')) {
+          const courseId = parseInt(path.split('=')[1]);
+          const course = getCourseById(courseId);
+          if (course) {
+            window.location.href = `edit_course.html?id=${courseId}`;
+          }
+        }
+      };
+
+      window.addEventListener('popstate', () => {
+        handleRoute(window.location.pathname);
+      });
+
+      handleRoute(window.location.pathname);
+
+      // Function to get a course by ID (replace with your data retrieval logic)
+      function getCourseById(id) {
+        return courses.find(course => course.id === id);
+      }
     });
   </script>
 </body>
